@@ -1,0 +1,50 @@
+# Import libraries
+import matplotlib.pyplot as plt
+
+# Create nodes
+nodes = ["Social Media Usage",
+         "Positive Effects",
+         "Negative Effects",
+         "Increased Communication",
+         "Enhanced Collaboration",
+         "Access to Information",
+         "Spread of Misinformation",
+         "Addiction",
+         "Privacy Concerns",
+         "Cyberbullying",
+         "Technology",
+         "Global Connectivity",
+         "Information Sharing"]
+
+# Create edges
+edges = [("Social Media Usage", "Positive Effects"),
+         ("Social Media Usage", "Negative Effects"),
+         ("Positive Effects", "Increased Communication"),
+         ("Positive Effects", "Enhanced Collaboration"),
+         ("Positive Effects", "Access to Information"),
+         ("Negative Effects", "Spread of Misinformation"),
+         ("Negative Effects", "Addiction"),
+         ("Negative Effects", "Privacy Concerns"),
+         ("Negative Effects", "Cyberbullying"),
+         ("Social Media Usage", "Technology"),
+         ("Technology", "Global Connectivity"),
+         ("Technology", "Information Sharing")]
+
+# Create plot
+plt.figure(figsize=(12, 8))
+
+# Draw nodes
+for node in nodes:
+    plt.plot([], [], 'o', label=node, markersize=15)
+
+# Draw edges
+for edge in edges:
+    start, end = edge
+    plt.plot([start, end], [start, end], 'b-', alpha=0.7)
+
+# Set title and legend
+plt.title("Concept Map: The Effects of Social Media Usage and Application in Our Technology")
+plt.legend(loc='upper left')
+
+# Show plot
+plt.show()
